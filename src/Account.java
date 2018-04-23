@@ -4,9 +4,13 @@ public  class Account implements Method{	//set Account info in this class
 	private int age;
 	private String gender;
 	private String status=null;
+	private String []couple=new String[1]; //create an array to store couple
 	private String[] friends=new String[100];	//create an array to store friends
 	private String[] parents=new String[100];	//create an array to store parents
 	private String[] children=new String[100];  //create an array to store children
+	private String[] colleague=new String[100]; //create an array to store colleague
+	private String[] classmates=new String[100]; //create an array to store classmates
+	Run run=new Run();
 	
 	public Account()	
 	{
@@ -36,6 +40,7 @@ public  class Account implements Method{	//set Account info in this class
 			}
 		}
 	}
+	
 	//set children 
 	public void setChildren(String input)
 	{
@@ -48,6 +53,31 @@ public  class Account implements Method{	//set Account info in this class
 			}
 		}
 	}
+	//set colleagues
+	public void setColleague(String input)
+	{
+		for(int i=0;i<colleague.length;i++)
+		{
+			if(colleague[i]==null)
+			{
+				this.colleague[i]=new String(input);
+				break;
+			}
+		}
+	}
+	//set classmates
+	public void setClassmats(String input)
+	{
+		for(int i=0;i<classmates.length;i++)
+		{
+			if(classmates[i]==null)
+			{
+				this.classmates[i]=new String(input);
+				break;
+			}
+		}
+	}
+	
 	
 	//list all parents of the selected person
 	public String[] listParents()
@@ -74,8 +104,30 @@ public  class Account implements Method{	//set Account info in this class
 		}
 		return children;
 	}
-	
-	
+	//list colleagues
+	public String[] listColleagues()
+	{
+		for(int i=0;i<colleague.length;i++)
+		{
+			if(colleague[i]!=null)
+			{
+				System.out.println(colleague[i]);
+			}
+		}
+		return colleague;
+	}
+	//list classmats
+	public String[] listClassmates()
+	{
+		for(int i=0;i<classmates.length;i++)
+		{
+			if(classmates[i]!=null)
+			{
+				System.out.println(classmates[i]);
+			}
+		}
+		return classmates;
+	}
 	//list all friends
 		public String[] listFriends()
 		{
@@ -100,6 +152,31 @@ public  class Account implements Method{	//set Account info in this class
 	public void setAge(int age)
 	{
 		this.age=age;
+	}
+
+	public void setCouple(String input) 
+	{
+		
+		for(int i=0;i<children.length;i++)
+		{
+			if(couple[i]==null)
+			{
+				this.couple[i]=new String(input);
+				break;
+			}
+		}
+		
+	}
+	public String[] listCouple()
+	{
+		for(int i=0;i<couple.length;i++)
+		{
+			if(couple[i]!=null)
+			{
+				System.out.println(couple[i]);
+			}
+		}
+		return couple;
 	}
 	public int getAge()
 	{

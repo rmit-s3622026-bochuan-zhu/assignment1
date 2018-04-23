@@ -2,7 +2,7 @@ import java.util.Scanner;
 
 public class Run {
 	private Account[] accounts=new Account[100];//attribute 100 spaces in the array
-	
+	public void initialAccount()
 	{
 		//initial account
 		//There are 4 accounts, Alice, Bob, Cindy and Don
@@ -69,6 +69,7 @@ public class Run {
 		}
 		return false;
 	}
+	
 	//search 
 	public Account search(String name)
 	{

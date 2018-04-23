@@ -4,8 +4,5 @@ public class MiniNet {	//run in here
 	{
 		Driver driver=new Driver();
 		driver.choose();
-		//give some initial value and object to test
-		//also give some initial relationship
-		
 	}
 }
